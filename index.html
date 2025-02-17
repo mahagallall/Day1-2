@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1-form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eed4d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        form {
+            background: rgb(235, 158, 245);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+            width: 750px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        
+
+        .scroll {
+
+            width: 100%;
+
+            overflow: scroll;
+
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .captcha {
+            font-weight: bold;
+            background: #ddd;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        button {
+            width: 30%;
+            padding: 10px;
+            margin-left: 250px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background: #9f25aa;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="register.php">
+        <h2>Registration</h2>
+        <br>
+        <br>
+        <label for="first">First Name:</label>
+        <input type="text" id="first" name="first_name" required>
+        <br>
+        <br>
+        <label for="last">Last Name:</label>
+        <input type="text" id="last" name="last_name" required>
+        <br>
+        <br>
+
+        <label for="Addreess">Address</label>
+        <textarea class="scroll" id="Addreess" name="address" rows="5" required></textarea>
+        <br>
+        <br>
+
+        <label for="country">Country</label>
+        <select name="country" id="country" required>
+            <option value="">Select Country</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Korea">Korea</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select>
+        <br>
+        <br>
+
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <br>
+        <br>
+        <label>Skills</label>
+        <input type="checkbox" name="skills[]" value="PHP">
+        <label>PHP</label>
+        <input type="checkbox" name="skills[]" value="MySQL">
+        <label>MYSQL</label>
+        <input type="checkbox" name="skills[]" value="J2SE">
+        <label>J2SE</label>
+        <input type="checkbox" name="skills[]" value="PostgreSQL">
+        <label>PostgreSQL</label>
+
+        <br>
+        <br>
+        <label for="user">Username</label>
+        <input type="text" id=""user name="username" required>
+
+        <br>
+        <br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="password" required>
+
+        <br>
+        <br>
+        <select name="Department" required>
+            <option value="">Select</option>
+            <option value="Egypt">OS</option>
+            <option value="Korea">Cyber Security</option>
+            <option value="USA">Fashion</option>
+            <option value="UK">Translation</option>
+        </select>
+
+
+        <br>
+        <br>
+        <label>Verification Code</label>
+        <p class="captcha">Sh68Sa</p>
+        <input type="text" name="captcha" required placeholder="Enter the above code">
+
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
